@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="theme-color" content="#101010">
+
+    <meta
+        name="description"
+        content="SMASH WICH - اكتشف المنيو واختار وجبتك المفضلة."
+    >
+
+    <title>SMASH WICH | سماش ويتش</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
+    <link rel="script" href="config.js">
+    <link rel="script" href="products.js">
+    <link rel="script" href="app.js">
+</head>
+
+<body>
+
+    <!-- Announcement -->
+    <div class="announcement">
+        <p id="announcementText"></p>
+    </div>
+
+
+    <!-- Header -->
+    <header class="site-header">
+
+        <a href="#home" class="brand">
+
+            <img
+                id="brandLogo"
+                src="images/LOGO.jpg"
+                alt="SMASH-WICH"
+            >
+
+            <span id="brandName">SMASH WICH</span>
+
+        </a>
+
+
+        <button
+            class="menu-toggle"
+            id="menuToggle"
+            type="button"
+            aria-label="فتح القائمة"
+        >
+            ☰
+        </button>
+
+
+        <nav class="main-nav" id="mainNav">
+
+            <a href="#home">الرئيسية</a>
+
+            <a href="#menu">المنيو</a>
+
+            <a href="#about">عن المطعم</a>
+
+            <a href="#contact">تواصل معنا</a>
+
+        </nav>
+
+
+        <button class="cart-button" id="openCart" type="button">
+
+            <span>السلة</span>
+
+            <span class="cart-count" id="cartCount">0</span>
+
+        </button>
+
+    </header>
+
+
+    <main>
+
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+
+            <div class="hero-content">
+
+                <span class="eyebrow" id="heroEyebrow"></span>
+
+                <h1 id="heroTitle"></h1>
+
+                <p id="heroDescription"></p>
+
+
+                <div class="hero-actions">
+
+                    <a href="#menu" class="button button-primary">
+                        اكتشف المنيو
+                        <span>↙</span>
+                    </a>
+
+                    <a href="#about" class="text-link">
+                        اعرف حكايتنا
+                    </a>
+
+                </div>
+
+
+                <div class="hero-proof">
+
+                    <span class="proof-dot"></span>
+
+                    <span id="heroProof"></span>
+
+                </div>
+
+            </div>
+
+
+            <div class="hero-visual">
+
+                <div class="hero-image-frame">
+
+                    <img
+                        id="heroImage"
+                        src="images/hero.jpg"
+                        alt="SMASH WICH"
+                    >
+
+                    <div class="hero-image-overlay">
+
+                        <span id="heroImageLabel"></span>
+
+                        <strong id="heroImageSubtitle"></strong>
+
+                    </div>
+
+                </div>
+
+                <div class="hero-sticker">
+
+                    <span>MADE</span>
+
+                    <strong>FRESH</strong>
+
+                    <span>DAILY</span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Moving Text -->
+        <div class="ticker">
+
+            <div class="ticker-track">
+
+                <span>GOOD FOOD. GOOD MOOD.</span>
+
+                <span>✳</span>
+
+                <span>MADE TO SMASH</span>
+
+                <span>✳</span>
+
+                <span>BIG TASTE. NO COMPROMISE.</span>
+
+                <span>✳</span>
+
+            </div>
+
+        </div>
+
+
+        <!-- Menu Section -->
+        <section class="menu-section section-padding" id="menu">
+
+            <div class="section-heading">
+
+                <div>
+
+                    <span class="eyebrow" id="menuEyebrow"></span>
+
+                    <h2 id="menuTitle"></h2>
+
+                    <p id="menuDescription"></p>
+
+                </div>
+
+            </div>
+
+
+            <!-- Categories -->
+            <div
+                class="category-tabs"
+                id="categoryTabs"
+            ></div>
+
+
+            <!-- Search -->
+            <div class="menu-toolbar">
+
+                <p>اختار وجبتك المفضلة</p>
+
+                <input
+                    type="search"
+                    id="productSearch"
+                    placeholder="ابحث عن منتج..."
+                    aria-label="ابحث عن منتج"
+                >
+
+            </div>
+
+
+            <!-- Products generated by JavaScript -->
+            <div
+                class="product-grid"
+                id="productGrid"
+            ></div>
+
+
+            <p class="menu-note" id="menuNote"></p>
+
+        </section>
+
+
+        <!-- Special Banner -->
+        <section class="promo-section">
+
+            <div class="promo-content">
+
+                <span class="eyebrow" id="promoEyebrow"></span>
+
+                <h2 id="promoTitle"></h2>
+
+                <p id="promoDescription"></p>
+
+                <a href="#menu" class="button button-dark">
+                    اطلب دلوقتي
+                    <span>↙</span>
+                </a>
+
+            </div>
+
+
+            <div class="promo-image">
+
+                <img
+                    id="promoImage"
+                    src="images/healthy-meal.jpg"
+                    alt="SMASH WICH Meal"
+                    loading="lazy"
+                >
+
+            </div>
+
+        </section>
+
+
+        <!-- About -->
+        <section class="about-section section-padding" id="about">
+
+            <div class="about-image">
+
+                <img
+                    id="aboutImage"
+                    src="images/sandwich.jpg"
+                    alt="SMASH WICH Food"
+                    loading="lazy"
+                >
+
+            </div>
+
+
+            <div class="about-content">
+
+                <span class="eyebrow" id="aboutEyebrow"></span>
+
+                <h2 id="aboutTitle"></h2>
+
+                <p id="aboutDescription"></p>
+
+
+                <div
+                    class="about-points"
+                    id="aboutPoints"
+                ></div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Contact -->
+        <section class="contact-section" id="contact">
+
+            <div class="contact-content">
+
+                <div>
+
+                    <span class="eyebrow" id="contactEyebrow"></span>
+
+                    <h2 id="contactTitle"></h2>
+
+                    <p id="contactDescription"></p>
+
+                </div>
+
+
+                <a
+                    href="#"
+                    id="contactWhatsApp"
+                    class="button button-primary"
+                    target="_blank"
+                    rel="noopener"
+                >
+                    اطلب على واتساب ↗
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="site-footer">
+
+        <a href="#home" class="footer-brand" id="footerBrand">
+            SMASH WICH
+        </a>
+
+        <p id="footerText"></p>
+
+
+        <div class="footer-links">
+
+            <a
+                href="#"
+                id="instagramLink"
+                target="_blank"
+                rel="noopener"
+            >
+                Instagram ↗
+            </a>
+
+            <a
+                href="#"
+                id="facebookLink"
+                target="_blank"
+                rel="noopener"
+            >
+                Facebook ↗
+            </a>
+
+            <a
+                href="#"
+                id="footerWhatsApp"
+                target="_blank"
+                rel="noopener"
+            >
+                WhatsApp ↗
+            </a>
+
+        </div>
+
+
+        <small>
+            © <span id="currentYear"></span>
+            <span id="copyrightName">SMASH WICH</span>
+            . All rights reserved.
+        </small>
+
+    </footer>
+
+
+    <!-- Cart Overlay -->
+    <div class="overlay" id="cartOverlay"></div>
+
+
+    <!-- Shopping Cart -->
+    <aside
+        class="cart-drawer"
+        id="cartDrawer"
+        aria-hidden="true"
+        aria-label="سلة المشتريات"
+    >
+
+        <div class="drawer-header">
+
+            <div>
+
+                <span class="eyebrow">YOUR ORDER</span>
+
+                <h2>
+                    سلة المشتريات
+                    <span id="drawerCount">(0)</span>
+                </h2>
+
+            </div>
+
+
+            <button
+                class="close-button"
+                id="closeCart"
+                type="button"
+                aria-label="إغلاق السلة"
+            >
+                ×
+            </button>
+
+        </div>
+
+
+        <div class="cart-items" id="cartItems"></div>
+
+
+        <div class="cart-bottom">
+
+            <div class="total-line">
+
+                <span>المجموع الفرعي</span>
+
+                <strong id="cartSubtotal">0 ج.م</strong>
+
+            </div>
+
+
+            <div class="total-line">
+
+                <span>التوصيل</span>
+
+                <strong id="cartDelivery">0 ج.م</strong>
+
+            </div>
+
+
+            <div class="total-line grand-total">
+
+                <span>الإجمالي</span>
+
+                <strong id="cartTotal">0 ج.م</strong>
+
+            </div>
+
+
+            <button
+                class="button button-primary checkout-button"
+                id="checkoutButton"
+                type="button"
+            >
+                تأكيد الطلب
+                <span>↗</span>
+            </button>
+
+
+            <p class="checkout-hint">
+                هتقدر تراجع تفاصيل طلبك قبل إرساله على واتساب.
+            </p>
+
+        </div>
+
+    </aside>
+
+
+    <!-- Checkout Modal -->
+    <div
+        class="modal-overlay"
+        id="checkoutModal"
+        aria-hidden="true"
+    >
+
+        <section class="checkout-modal">
+
+            <div class="drawer-header">
+
+                <div>
+
+                    <span class="eyebrow">ALMOST THERE</span>
+
+                    <h2>بيانات التوصيل</h2>
+
+                </div>
+
+
+                <button
+                    class="close-button"
+                    id="closeCheckout"
+                    type="button"
+                    aria-label="إغلاق"
+                >
+                    ×
+                </button>
+
+            </div>
+
+
+            <form id="checkoutForm">
+
+                <label>
+                    الاسم بالكامل
+
+                    <input
+                        type="text"
+                        name="customerName"
+                        required
+                        maxlength="80"
+                        placeholder="اكتب اسمك"
+                    >
+                </label>
+
+
+                <label>
+                    رقم الموبايل
+
+                    <input
+                        type="tel"
+                        name="phone"
+                        required
+                        maxlength="25"
+                        placeholder="01xxxxxxxxx"
+                    >
+                </label>
+
+
+                <label>
+                    المنطقة
+
+                    <input
+                        type="text"
+                        name="area"
+                        required
+                        maxlength="100"
+                        placeholder="المنطقة"
+                    >
+                </label>
+
+
+                <label>
+                    العنوان بالتفصيل
+
+                    <textarea
+                        name="address"
+                        required
+                        maxlength="300"
+                        rows="3"
+                        placeholder="الشارع ورقم العمارة والدور..."
+                    ></textarea>
+                </label>
+
+
+                <label>
+                    ملاحظات إضافية
+
+                    <textarea
+                        name="notes"
+                        maxlength="300"
+                        rows="2"
+                        placeholder="اختياري"
+                    ></textarea>
+                </label>
+
+
+                <div
+                    class="checkout-summary"
+                    id="checkoutSummary"
+                ></div>
+
+
+                <button
+                    class="button button-primary checkout-submit"
+                    type="submit"
+                >
+                    إرسال الطلب على واتساب ↗
+                </button>
+
+
+                <p class="checkout-hint">
+                    واتساب هيفتح برسالة جاهزة. اضغط إرسال لتأكيد الطلب.
+                </p>
+
+            </form>
+
+        </section>
+
+    </div>
+
+
+    <!-- Notification -->
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+
+    <!-- JavaScript Files: ترتيب التحميل مهم -->
+    <script src="config.js"></script>
+    <script src="products.js"></script>
+    <script src="app.js"></script>
+
+</body>
+</html>
